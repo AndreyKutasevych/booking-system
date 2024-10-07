@@ -11,19 +11,10 @@
    <children>
       <FlowPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" text="Add Show" />
+            <Button mnemonicParsing="false" text="Clear All Shows" />
          </children>
       </FlowPane>
-      <Accordion>
-        <panes>
-          <TitledPane animated="false" text="untitled 1">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-        </panes>
-      </Accordion>
+      <Accordion />
    </children>
 </VBox>
