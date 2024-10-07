@@ -3,18 +3,50 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="492.0" prefWidth="1001.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.ShowList">
+<VBox prefHeight="492.0" prefWidth="1001.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.ShowList">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets />
     </padding>
    <children>
-      <FlowPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Button mnemonicParsing="false" text="Add Show" />
-            <Button mnemonicParsing="false" text="Clear All Shows" />
-         </children>
-      </FlowPane>
       <Accordion />
+      <Label text="Show Title">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="showTitle" />
+      <Label layoutX="10.0" layoutY="76.0" text="Running time">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="runningTime" layoutX="10.0" layoutY="123.0" />
+      <Label layoutX="10.0" layoutY="168.0" text="Start Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startingDate" />
+      <Label layoutX="10.0" layoutY="261.0" text="End Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="endDate" layoutX="10.0" layoutY="308.0" />
+      <Label layoutX="10.0" layoutY="354.0" text="Ticket Price">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ticketPrice" layoutX="10.0" layoutY="216.0" />
+      <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" />
+      <Button mnemonicParsing="false" text="List All shows" onAction="#ListShows"/>
+      <Accordion fx:id="container">
+        <panes>
+        </panes>
+      </Accordion>
+      <Button mnemonicParsing="false" onAction="#Reset" text="Full reset" />
    </children>
 </VBox>

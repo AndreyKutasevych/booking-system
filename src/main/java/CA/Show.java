@@ -2,12 +2,22 @@ package CA;
 
 public class Show {
     private String showName;
-    private int showNumber;
+    private String showRunningTime;
+    private String startDate;
+    private String endDate;
+    private String price;
     private Show nextShow = null;
 
-    public Show(String showName, int showNumber) {
+    public Show(String showName, String showRunningTime, String startDate, String endDate, String price) {
         this.showName = showName;
-        this.showNumber = showNumber;
+        this.showRunningTime = showRunningTime;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.price = price;
+    }
+
+    public String getShowName() {
+        return showName;
     }
 
     public Show getNextShow() {
@@ -21,7 +31,10 @@ public class Show {
     @Override
     public String toString() {
         return "Show: " +
-                "showName: '" + showName + '\'' +
-                ", showNumber: " + showNumber;
+                "showName: " + showName  +
+                ", showRunningTime: " + showRunningTime +
+                ", startDate: " + startDate +
+                ", endDate: " + endDate +
+                ", price: " + price;
     }
 }
