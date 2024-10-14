@@ -7,6 +7,7 @@ public class Show {
     private String endDate;
     private String price;
     private Show nextShow = null;
+    private PerformanceList performanceList;
 
     public Show(String showName, String showRunningTime, String startDate, String endDate, String price) {
         this.showName = showName;
@@ -36,5 +37,13 @@ public class Show {
                 ", startDate: " + startDate +
                 ", endDate: " + endDate +
                 ", price: " + price;
+    }
+
+    public PerformanceList getPerformanceList() {
+        return performanceList;
+    }
+
+    public void setPerformanceList(PerformanceList performanceList) {
+        this.performanceList = performanceList;
     }
 }
