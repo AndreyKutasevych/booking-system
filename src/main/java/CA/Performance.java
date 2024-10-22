@@ -1,25 +1,37 @@
 package CA;
+import java.time.LocalDate;
 
 public class Performance {
-    private String date;
+    private LocalDate date;
     private String time;
+    private Performance next=null;
 
-    public Performance(String date, String time) {
+    public Performance(LocalDate date, String time) {
         this.date = date;
         this.time = time;
     }
-    private Performance next=null;
 
-    public void setTime(String time) {
-        if(time.equals("matinee")||time.equals("evening")||time.equals("Matinee")||time.equals("Evening")){
-            this.time=time;
-        }
+    public LocalDate getDate() {
+        return date;
     }
 
-    @Override
-    public String toString() {
-        return "Performance: " +
-                "date: " + date+
-                ", time: " + time;
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Performance getNext() {
+        return next;
+    }
+
+    public void setNext(Performance next) {
+        this.next = next;
     }
 }

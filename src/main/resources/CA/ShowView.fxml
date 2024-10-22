@@ -42,7 +42,6 @@
       </Label>
       <TextField fx:id="ticketPrice" layoutX="10.0" layoutY="216.0" />
       <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" />
-      <Button mnemonicParsing="false" text="List All shows" onAction="#ListShows"/>
       <Accordion fx:id="container">
         <panes>
         </panes>
