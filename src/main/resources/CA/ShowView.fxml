@@ -11,6 +11,11 @@
     </padding>
    <children>
       <Accordion />
+      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
       <Label text="Show Title">
          <font>
             <Font size="18.0" />

@@ -76,42 +76,15 @@ public class PerformanceList implements Initializable {
         if(head!=null) {
             Performance temp = head;
             do {
-                Button newbutton2 = new Button("Delete");
-                Button performanceListButton2 = new Button("Open Performance");
-                container.getPanes().add(new TitledPane((temp.getDate()+" "+temp.getTime()), new FlowPane(new Label("View seat allocation"), performanceListButton2, newbutton2)));
-                final Performance temp12 = temp;
-                temp = temp.getNext();
-                performanceListButton2.setOnAction(e->OpenPerformance(temp12));
-                newbutton2.setOnAction(e -> DeletePerformance(temp12));
+                System.out.println("Im gonna put a list of performances here");
             }
             while (temp != null);
         }
-    }
-    public void OpenPerformance(Performance s){
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         head=ShowList.selectedShow.getPerformanceList().head;
         ListPerformances();
-    }
-    @FXML
-    public void saveChanges() {
-        // Update the linked list (PerformanceList) with the current state of the ListView
-        if (currentShow != null && currentShow.getPerformanceList() != null) {
-            PerformanceList performanceList = currentShow.getPerformanceList();
-            performanceList.clear();  // Clear the current list in the PerformanceList
-
-            // Add the updated items from the ListView to the PerformanceList
-            for (String performance : performanceListView.getItems()) {
-                performanceList.add(performance);  // Assuming PerformanceList has an add() method
-            }
-        }
-    }
-
-    @FXML
-    public void closeWindow() {
-        Stage stage = (Stage) performanceListView.getScene().getWindow();
-        stage.close();
     }
 }
