@@ -10,6 +10,7 @@
         <Insets />
     </padding>
    <children>
+<<<<<<< HEAD
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Untitled Tab 1">
@@ -110,5 +111,44 @@
            <panes>
            </panes>
        </Accordion>
+=======
+      <Accordion />
+      <Label text="Show Title">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="showTitle" />
+      <Label layoutX="10.0" layoutY="76.0" text="Running time">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="runningTime" layoutX="10.0" layoutY="123.0" />
+      <Label layoutX="10.0" layoutY="168.0" text="Start Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startingDate" />
+      <Label layoutX="10.0" layoutY="261.0" text="End Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="endDate" layoutX="10.0" layoutY="308.0" />
+      <Label layoutX="10.0" layoutY="354.0" text="Ticket Price">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ticketPrice" layoutX="10.0" layoutY="216.0" />
+      <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" />
+      <Accordion fx:id="container">
+        <panes>
+        </panes>
+      </Accordion>
+      <Button mnemonicParsing="false" onAction="#Reset" text="Full reset" />
+>>>>>>> parent of facefb6 (test commit)
    </children>
 </VBox>
