@@ -10,85 +10,102 @@
         <Insets />
     </padding>
    <children>
-      <GridPane>
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label text="Start Date" GridPane.rowIndex="2">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="showTitle" GridPane.rowIndex="1" />
-            <Label text="Show Title">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label text="Running time" GridPane.rowIndex="6">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="runningTime" GridPane.rowIndex="7" />
-            <DatePicker fx:id="startingDate" GridPane.rowIndex="3" />
-            <Label text="End Date" GridPane.rowIndex="4">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <DatePicker fx:id="endDate" GridPane.rowIndex="5" />
-            <Label text="Ticket Prices" GridPane.rowIndex="8">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="ticketPrice" promptText="balcony" GridPane.rowIndex="9" />
-            <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <Button mnemonicParsing="false" onAction="#Reset" text="Full show list reset" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <Label text="Customer Name" GridPane.columnIndex="1">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label text="Customer Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label text="Customer email" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="Add customer" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="Full customer list reset" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <TextField promptText="circle" GridPane.rowIndex="10" />
-            <TextField promptText="stalls" GridPane.rowIndex="11" />
-            <Button mnemonicParsing="false" text="Add performance to the selected show" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <Button mnemonicParsing="false" text="Full performance list removal for the selected show" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-         </children>
-      </GridPane>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="0.0" prefHeight="1000.0" prefWidth="800.0">
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Start Date" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="showTitle" GridPane.rowIndex="1" />
+                              <Label text="Show Title">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Running time" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="runningTime" GridPane.rowIndex="7" />
+                              <DatePicker fx:id="startingDate" GridPane.rowIndex="3" />
+                              <Label text="End Date" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="endDate" GridPane.rowIndex="5" />
+                              <Label text="Ticket Prices" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ticketPrice" promptText="balcony" GridPane.rowIndex="9" />
+                              <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Button mnemonicParsing="false" onAction="#Reset" text="Full show list reset" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label text="Customer Name" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Customer Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Customer email" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Button mnemonicParsing="false" text="Add customer" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Button mnemonicParsing="false" text="Full customer list reset" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField promptText="circle" GridPane.rowIndex="10" />
+                              <TextField promptText="stalls" GridPane.rowIndex="11" />
+                              <Button mnemonicParsing="false" text="Add performance to the selected show" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <Button mnemonicParsing="false" text="Full performance list removal for the selected show" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
        <Accordion fx:id="container">
            <panes>
            </panes>
