@@ -95,23 +95,4 @@ public class PerformanceList implements Initializable {
         head=ShowList.selectedShow.getPerformanceList().head;
         ListPerformances();
     }
-    @FXML
-    public void saveChanges() {
-        // Update the linked list (PerformanceList) with the current state of the ListView
-        if (currentShow != null && currentShow.getPerformanceList() != null) {
-            PerformanceList performanceList = currentShow.getPerformanceList();
-            performanceList.clear();  // Clear the current list in the PerformanceList
-
-            // Add the updated items from the ListView to the PerformanceList
-            for (String performance : performanceListView.getItems()) {
-                performanceList.add(performance);  // Assuming PerformanceList has an add() method
-            }
-        }
-    }
-
-    @FXML
-    public void closeWindow() {
-        Stage stage = (Stage) performanceListView.getScene().getWindow();
-        stage.close();
-    }
 }
