@@ -62,18 +62,6 @@ public class ShowList {
        }
    }
     private void OpenPerformanceList (Show show) {
-       selectedShow=show;
-        System.out.println(selectedShow.getPerformanceList().getDateOfPerformance());
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PerformanceView.fxml"));
-            Scene newScene = new Scene(loader.load());
-            Stage newStage = new Stage();
-            newStage.setTitle(show.getShowName());
-            newStage.setScene(newScene);
-            newStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
     public void Delete(Show s) {
         Show temp=head,prev=null;

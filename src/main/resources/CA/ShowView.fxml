@@ -1,154 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <VBox prefHeight="492.0" prefWidth="1001.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.ShowList">
-    <padding>
-        <Insets />
-    </padding>
-   <children>
-<<<<<<< HEAD
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+    <children>
+      <TabPane maxHeight="-Infinity" prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: light-blue;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Show tab">
             <content>
-              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1000.0" minWidth="0.0" prefHeight="1000.0" prefWidth="800.0">
+              <AnchorPane maxHeight="-Infinity" minHeight="800.0" minWidth="0.0" prefHeight="1000.0" prefWidth="200.0">
                      <children>
-                        <GridPane>
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Label text="Start Date" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="showTitle" GridPane.rowIndex="1" />
-                              <Label text="Show Title">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Running time" GridPane.rowIndex="6">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="runningTime" GridPane.rowIndex="7" />
-                              <DatePicker fx:id="startingDate" GridPane.rowIndex="3" />
-                              <Label text="End Date" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <DatePicker fx:id="endDate" GridPane.rowIndex="5" />
-                              <Label text="Ticket Prices" GridPane.rowIndex="8">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="ticketPrice" promptText="balcony" GridPane.rowIndex="9" />
-                              <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                              <Button mnemonicParsing="false" onAction="#Reset" text="Full show list reset" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                              <Label text="Customer Name" GridPane.columnIndex="1">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Customer Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Customer email" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Button mnemonicParsing="false" text="Add customer" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <Button mnemonicParsing="false" text="Full customer list reset" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <TextField promptText="circle" GridPane.rowIndex="10" />
-                              <TextField promptText="stalls" GridPane.rowIndex="11" />
-                              <Button mnemonicParsing="false" text="Add performance to the selected show" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                              <Button mnemonicParsing="false" text="Full performance list removal for the selected show" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                           </children>
-                        </GridPane>
+                        <Label text="Start Date" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="runningTime" AnchorPane.topAnchor="125.0" />
+                        <Label text="Show Title" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="showTitle" AnchorPane.topAnchor="25.0" />
+                        <Label text="Running time" AnchorPane.topAnchor="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="startingDate" AnchorPane.topAnchor="75.0" />
+                        <Label text="End Date" AnchorPane.topAnchor="150.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="endDate" AnchorPane.topAnchor="175.0" />
+                        <Label text="Ticket Price" AnchorPane.topAnchor="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ticketPrice" AnchorPane.topAnchor="225.0" />
+                        <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="300.0" />
+                         <Accordion fx:id="container" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
+                             <panes>
+                             </panes>
+                         </Accordion>
+                         <Button mnemonicParsing="false" onAction="#Reset" text="Full reset" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="300.0" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
+            <Tab text="Performance tab">
+
+            </Tab>
         </tabs>
       </TabPane>
-       <Accordion fx:id="container">
-           <panes>
-           </panes>
-       </Accordion>
-=======
-      <Accordion />
-      <Label text="Show Title">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="showTitle" />
-      <Label layoutX="10.0" layoutY="76.0" text="Running time">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="runningTime" layoutX="10.0" layoutY="123.0" />
-      <Label layoutX="10.0" layoutY="168.0" text="Start Date">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <DatePicker fx:id="startingDate" />
-      <Label layoutX="10.0" layoutY="261.0" text="End Date">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <DatePicker fx:id="endDate" layoutX="10.0" layoutY="308.0" />
-      <Label layoutX="10.0" layoutY="354.0" text="Ticket Price">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="ticketPrice" layoutX="10.0" layoutY="216.0" />
-      <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" />
-      <Accordion fx:id="container">
-        <panes>
-        </panes>
-      </Accordion>
-      <Button mnemonicParsing="false" onAction="#Reset" text="Full reset" />
->>>>>>> parent of facefb6 (test commit)
    </children>
 </VBox>
