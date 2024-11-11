@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PerformanceList implements Initializable {
+public class PerformanceList{
     private Performance head=null;
-    public Accordion container;
+    public Accordion performanceContainer;
 
     @FXML
     private DatePicker dateOfPerformance;
@@ -72,15 +72,9 @@ public class PerformanceList implements Initializable {
         ListPerformances();
     }
     public void ListPerformances(){
-        container.getPanes().clear();
+        performanceContainer.getPanes().clear();
 
     }
     public void OpenPerformance(Performance s){
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        head=ShowList.selectedShow.getPerformanceList().head;
-        ListPerformances();
     }
 }

@@ -5,16 +5,20 @@ public class Show {
     private String showRunningTime;
     private String startDate;
     private String endDate;
-    private String price;
+    private String stallPrice;
+    private String balconyPrice;
+    private String circlePrice;
     private Show nextShow = null;
     private PerformanceList performanceList;
 
-    public Show(String showName, String showRunningTime, String startDate, String endDate, String price) {
+    public Show(String showName, String showRunningTime, String startDate, String endDate, String stallPrice, String circlePrice, String balconyPrice) {
         this.showName = showName;
         this.showRunningTime = showRunningTime;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.price = price;
+        this.stallPrice = stallPrice;
+        this.circlePrice=circlePrice;
+        this.balconyPrice=balconyPrice;
     }
 
     public String getShowName() {
@@ -35,8 +39,8 @@ public class Show {
                 "showName: " + showName  +
                 ", showRunningTime: " + showRunningTime +
                 ", startDate: " + startDate +
-                ", endDate: " + endDate +
-                ", price: " + price;
+                ", endDate: " + endDate + ", stall ticket price: " + stallPrice + ", balcony ticket price: " + balconyPrice +
+                ", circle ticket price: " + circlePrice;
     }
 
     public PerformanceList getPerformanceList() {
@@ -45,5 +49,29 @@ public class Show {
 
     public void setPerformanceList(PerformanceList performanceList) {
         this.performanceList = performanceList;
+    }
+
+    public String getStallPrice() {
+        return stallPrice;
+    }
+
+    public void setStallPrice(String stallPrice) {
+        this.stallPrice = stallPrice;
+    }
+
+    public String getBalconyPrice() {
+        return balconyPrice;
+    }
+
+    public void setBalconyPrice(String balconyPrice) {
+        this.balconyPrice = balconyPrice;
+    }
+
+    public String getCirclePrice() {
+        return circlePrice;
+    }
+
+    public void setCirclePrice(String circlePrice) {
+        this.circlePrice = circlePrice;
     }
 }

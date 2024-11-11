@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import javafx.collections.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.PerformanceList">
-   <children>
-      <Label text="select date">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <DatePicker fx:id="dateOfPerformance" />
-      <Label text="select time">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <ChoiceBox fx:id="timeChoice" layoutX="100" layoutY="50">
-         <items>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="CA.PerformanceList"
+            prefHeight="400.0" prefWidth="600.0">
+    <Button layoutX="436.0" layoutY="300.0" mnemonicParsing="false" text="Add performance" AnchorPane.leftAnchor="436.0" AnchorPane.topAnchor="300.0" />
+    <Accordion fx:id="performanceContainer" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
+        <panes>
+        </panes>
+    </Accordion>
+    <Button layoutX="586.0" layoutY="300.0" mnemonicParsing="false" onAction="#Reset" text="Full performance reset" AnchorPane.leftAnchor="586.0" AnchorPane.topAnchor="300.0" />
+    <ChoiceBox layoutX="79.0" layoutY="98.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="85.0">
+        <items>
             <FXCollections fx:factory="observableArrayList">
-               <String fx:value="Matinee" />
-               <String fx:value="Evening" />
+                <String fx:value="matinee"/>
+                <String fx:value="evening"/>
             </FXCollections>
-         </items>
-      </ChoiceBox>
-      <Button mnemonicParsing="false" onAction="#AddPerformance" text="Add performance" />
-      <Accordion fx:id="container"/>
-      <Button mnemonicParsing="false" onAction="#Reset" text="Full reset" />
-   </children>
-</VBox>
+        </items>
+    </ChoiceBox>
+    <Label layoutX="65.0" layoutY="23.0" text="Date" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="154.0" layoutY="41.0" text="Time" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <DatePicker layoutX="3.0" layoutY="64.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0" />
+    <Accordion layoutX="363.0" layoutY="22.0" />
+    <TextField layoutX="11.0" layoutY="181.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="140.0" />
+    <Label layoutX="29.0" layoutY="119.0" text="Show number" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+</AnchorPane>

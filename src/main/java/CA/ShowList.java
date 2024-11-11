@@ -18,12 +18,16 @@ public class ShowList {
    @FXML
     private DatePicker endDate;
    @FXML
-    private TextField ticketPrice;
+    private TextField ticketStallPrice;
+    @FXML
+    private TextField ticketBalconyPrice;
+    @FXML
+    private TextField ticketCirclePrice;
    @FXML
    public Accordion container;
    public void AddShow(){
        if(head==null){
-          head = new Show(showTitle.getText(),runningTime.getText(),startingDate.getValue().toString(),endDate.getValue().toString(),ticketPrice.getText());
+          head = new Show(showTitle.getText(),runningTime.getText(),startingDate.getValue().toString(),endDate.getValue().toString(),ticketStallPrice.getText(),ticketCirclePrice.getText(),ticketBalconyPrice.getText());
            head.setPerformanceList(new PerformanceList());
        }
        else{
@@ -31,14 +35,16 @@ public class ShowList {
           while(temp.getNextShow()!=null){
              temp=temp.getNextShow();
           }
-          temp.setNextShow(new Show(showTitle.getText(),runningTime.getText(),startingDate.getValue().toString(),endDate.getValue().toString(),ticketPrice.getText()));
+          temp.setNextShow(new Show(showTitle.getText(),runningTime.getText(),startingDate.getValue().toString(),endDate.getValue().toString(),ticketStallPrice.getText(),ticketCirclePrice.getText(),ticketBalconyPrice.getText()));
            temp.setPerformanceList(new PerformanceList());
        }
        showTitle.clear();
        runningTime.clear();
        startingDate.setValue(null);
        endDate.setValue(null);
-       ticketPrice.clear();
+       ticketStallPrice.clear();
+       ticketBalconyPrice.clear();
+       ticketCirclePrice.clear();
        ListShows();
    }
    public void Reset(){
@@ -50,13 +56,11 @@ public class ShowList {
        if(head!=null) {
            Show temp = head;
           do {
-               Button newbutton2 = new Button("Delete");
-               Button performanceListButton2 = new Button("List Of Performances");
-               container.getPanes().add(new TitledPane(temp.getShowName(), new FlowPane(new Label(temp.toString()), performanceListButton2, newbutton2)));
+               Button deleteButton = new Button("Delete");
+               container.getPanes().add(new TitledPane(temp.getShowName(), new FlowPane(new Label(temp.toString()), deleteButton)));
               final Show temp12 = temp;
-              performanceListButton2.setOnAction(e->OpenPerformanceList(temp12));
                temp = temp.getNextShow();
-               newbutton2.setOnAction(e -> Delete(temp12));
+               deleteButton.setOnAction(e -> Delete(temp12));
            }
           while (temp != null);
        }

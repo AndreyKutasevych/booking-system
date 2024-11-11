@@ -4,55 +4,56 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="492.0" prefWidth="1001.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.ShowList">
-    <TabPane maxHeight="-Infinity" prefHeight="1000.0" prefWidth="200.0"
-             tabClosingPolicy="UNAVAILABLE">
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox prefHeight="492.0" prefWidth="1001.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.ShowList">
+    <TabPane maxHeight="-Infinity" prefHeight="1000.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <Tab text="Show tab">
-            <AnchorPane maxHeight="-Infinity" minHeight="800.0" minWidth="0.0" prefHeight="1000.0"
-                        prefWidth="200.0">
+            <AnchorPane maxHeight="-Infinity" minHeight="800.0" minWidth="0.0" prefHeight="1000.0" prefWidth="200.0">
                 <Label text="Start Date" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="runningTime" AnchorPane.topAnchor="125.0"/>
+                <TextField fx:id="runningTime" AnchorPane.topAnchor="125.0" />
                 <Label text="Show Title" AnchorPane.topAnchor="0.0">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="showTitle" AnchorPane.topAnchor="25.0"/>
+                <TextField fx:id="showTitle" AnchorPane.topAnchor="25.0" />
                 <Label text="Running time" AnchorPane.topAnchor="100.0">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
-                <DatePicker fx:id="startingDate" AnchorPane.topAnchor="75.0"/>
+                <DatePicker fx:id="startingDate" AnchorPane.topAnchor="75.0" />
                 <Label text="End Date" AnchorPane.topAnchor="150.0">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
-                <DatePicker fx:id="endDate" AnchorPane.topAnchor="175.0"/>
+                <DatePicker fx:id="endDate" AnchorPane.topAnchor="175.0" />
                 <Label text="Ticket Price" AnchorPane.topAnchor="200.0">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="ticketPrice" AnchorPane.topAnchor="225.0"/>
-                <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show"
-                        AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="300.0"/>
+                <TextField fx:id="ticketStallPrice" promptText="stall" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="225.0" />
+                <Button mnemonicParsing="false" onAction="#AddShow" text="Add Show" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="300.0" />
                 <Accordion fx:id="container" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
                     <panes>
                     </panes>
                 </Accordion>
-                <Button mnemonicParsing="false" onAction="#Reset" text="Full reset"
-                        AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="300.0"/>
+                <Button mnemonicParsing="false" onAction="#Reset" text="Full reset" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="300.0" />
+            <TextField fx:id="ticketCirclePrice" layoutX="1.0" layoutY="259.0" promptText="circle" AnchorPane.topAnchor="250.0" />
+            <TextField fx:id="ticketBalconyPrice" layoutX="6.0" layoutY="300.0" promptText="balcony" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="275.0" />
             </AnchorPane>
         </Tab>
         <Tab text="Performance tab">
-
+            <AnchorPane maxHeight="-Infinity" minHeight="800.0" minWidth="0.0" prefHeight="1000.0" prefWidth="200.0">
+                <fx:include source="PerformanceView.fxml"/>
+            </AnchorPane>
         </Tab>
     </TabPane>
 </VBox>
