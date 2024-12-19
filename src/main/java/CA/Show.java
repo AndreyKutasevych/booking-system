@@ -9,7 +9,6 @@ public class Show {
     private String balconyPrice;
     private String circlePrice;
     private Show nextShow = null;
-    private PerformanceList performanceList;
 
     public Show(String showName, String showRunningTime, String startDate, String endDate, String stallPrice, String circlePrice, String balconyPrice) {
         this.showName = showName;
@@ -41,14 +40,6 @@ public class Show {
                 ", startDate: " + startDate +
                 ", endDate: " + endDate + ", stall ticket price: " + stallPrice + ", balcony ticket price: " + balconyPrice +
                 ", circle ticket price: " + circlePrice;
-    }
-
-    public PerformanceList getPerformanceList() {
-        return performanceList;
-    }
-
-    public void setPerformanceList(PerformanceList performanceList) {
-        this.performanceList = performanceList;
     }
 
     public String getStallPrice() {

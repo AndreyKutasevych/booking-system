@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Font?>
-<?import javafx.collections.FXCollections?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CA.PerformanceList"
-            prefHeight="400.0" prefWidth="600.0">
-    <Button layoutX="436.0" layoutY="300.0" mnemonicParsing="false" text="Add performance" AnchorPane.leftAnchor="436.0" AnchorPane.topAnchor="300.0" />
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA.PerformanceList">
+    <Button layoutX="436.0" layoutY="300.0" mnemonicParsing="false" onAction="#AddPerformance" text="Add performance" AnchorPane.leftAnchor="436.0" AnchorPane.topAnchor="300.0" />
     <Accordion fx:id="performanceContainer" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
         <panes>
         </panes>
     </Accordion>
     <Button layoutX="586.0" layoutY="300.0" mnemonicParsing="false" onAction="#Reset" text="Full performance reset" AnchorPane.leftAnchor="586.0" AnchorPane.topAnchor="300.0" />
-    <ChoiceBox layoutX="79.0" layoutY="98.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="85.0">
+    <ChoiceBox fx:id="timeChoice" layoutX="79.0" layoutY="98.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="85.0">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="matinee"/>
-                <String fx:value="evening"/>
+                <String fx:value="matinee" />
+                <String fx:value="evening" />
             </FXCollections>
         </items>
     </ChoiceBox>
@@ -36,10 +31,10 @@
             <Font size="18.0" />
         </font>
     </Label>
-    <DatePicker layoutX="3.0" layoutY="64.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0" />
+    <DatePicker fx:id="dateOfPerformance" layoutX="3.0" layoutY="64.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0" />
     <Accordion layoutX="363.0" layoutY="22.0" />
-    <TextField layoutX="11.0" layoutY="181.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="140.0" />
-    <Label layoutX="29.0" layoutY="119.0" text="Show number" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
+    <TextField layoutX="11.0" fx:id="showName" layoutY="181.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="140.0" />
+    <Label layoutX="29.0" layoutY="119.0" text="Show title" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
         <font>
             <Font size="18.0" />
         </font>

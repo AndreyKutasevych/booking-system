@@ -1,14 +1,10 @@
 package CA;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
-import javafx.stage.Stage;
 
 public class ShowList {
-    public static Show selectedShow;
-   private Show head=null;
+   public Show head=null;
    @FXML
    private TextField showTitle;
    @FXML
@@ -28,7 +24,6 @@ public class ShowList {
    public void AddShow(){
        if(head==null){
           head = new Show(showTitle.getText(),runningTime.getText(),startingDate.getValue().toString(),endDate.getValue().toString(),ticketStallPrice.getText(),ticketCirclePrice.getText(),ticketBalconyPrice.getText());
-           head.setPerformanceList(new PerformanceList());
        }
        else{
           Show temp = head;
@@ -36,7 +31,6 @@ public class ShowList {
              temp=temp.getNextShow();
           }
           temp.setNextShow(new Show(showTitle.getText(),runningTime.getText(),startingDate.getValue().toString(),endDate.getValue().toString(),ticketStallPrice.getText(),ticketCirclePrice.getText(),ticketBalconyPrice.getText()));
-           temp.setPerformanceList(new PerformanceList());
        }
        showTitle.clear();
        runningTime.clear();
@@ -65,8 +59,6 @@ public class ShowList {
           while (temp != null);
        }
    }
-    private void OpenPerformanceList (Show show) {
-    }
     public void Delete(Show s) {
         Show temp=head,prev=null;
         while(temp!=null && !temp.equals(s)) {

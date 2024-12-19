@@ -13,7 +13,7 @@ public class CAMain extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CAMain.class.getResource("ShowView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1500, 850);
-        stage.setTitle("Hello!");
+        stage.setTitle("CA");
         stage.setScene(scene);
         stage.show();
     }

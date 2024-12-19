@@ -1,25 +1,19 @@
 package CA;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.FlowPane;
-import javafx.stage.Stage;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class PerformanceList{
-    private Performance head=null;
+    public Performance head=null;
     public Accordion performanceContainer;
-
     @FXML
     private DatePicker dateOfPerformance;
     @FXML
     private ChoiceBox<String> timeChoice;
+    @FXML
+    private TextField showName;
 
     public DatePicker getDateOfPerformance() {
         return dateOfPerformance;
@@ -38,17 +32,18 @@ public class PerformanceList{
     }
     public void AddPerformance(){
         if(head==null){
-            head=new Performance(dateOfPerformance.getValue(),timeChoice.getValue());
+            head=new Performance(dateOfPerformance.getValue(),timeChoice.getValue(),showName.getText());
         }
         else{
             Performance temp=head;
             while(temp.getNext()!=null){
                 temp=temp.getNext();
             }
-            temp.setNext(new Performance(dateOfPerformance.getValue(),timeChoice.getValue()));
+            temp.setNext(new Performance(dateOfPerformance.getValue(),timeChoice.getValue(),showName.getText()));
         }
         dateOfPerformance.setValue(null);
         timeChoice.setValue(null);
+        showName.clear();
         ListPerformances();
     };
     public void Reset(){
@@ -73,8 +68,16 @@ public class PerformanceList{
     }
     public void ListPerformances(){
         performanceContainer.getPanes().clear();
-
-    }
-    public void OpenPerformance(Performance s){
+        if(head!=null){
+            Performance temp=head;
+            do {
+                Button deleteButton = new Button("Delete");
+                performanceContainer.getPanes().add(new TitledPane(temp.getShowName()+temp.getTime(), new FlowPane(new Label(temp.toString()), deleteButton)));
+                final Performance temp12 = temp;
+                temp=temp.getNext();
+                deleteButton.setOnAction(e -> DeletePerformance(temp12));
+            }
+            while (temp != null);
+        }
     }
 }
