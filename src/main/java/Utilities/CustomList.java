@@ -46,4 +46,27 @@ public class CustomList<D> {
             }
         }
     }
+    public D getIndex(int index) {
+        Node<D> current = head;
+        int count = 0;
+
+        while (current != null) {
+            if (count == index) {
+                return current.data;
+            }
+            count++;
+            current = current.next;
+        }
+        return null; // in case of invalid index
+    }
+    public int getSize() {
+        int count = 0;
+        Node<D> current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        System.out.println("Size of CustomList: " + count);
+        return count;
+    }
 }

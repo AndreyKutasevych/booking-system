@@ -1,3 +1,16 @@
 <object-stream>
-
+    <Utilities.CustomList>
+        <head>
+            <data class="theatrebookingsystem.model.ShowModel">
+                <title>123</title>
+                <runningTime>321.0</runningTime>
+                <startDate>2024-11-05</startDate>
+                <endDate>2024-11-26</endDate>
+                <stallPrice>123.0</stallPrice>
+                <circlePrice>234.0</circlePrice>
+                <balconyPrice>345.0</balconyPrice>
+            </data>
+            <next></next>
+        </head>
+    </Utilities.CustomList>
 </object-stream>
